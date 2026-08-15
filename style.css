@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* Navbar */
+
+header {
+    background: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(12, 106, 183);
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: rgb(236, 229, 233);
+    text-decoration:dotted;
+}
+
+.nav-links a:hover {
+    color: #e8fa60;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-text {
+    font-size: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #03050a;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
+.secondary-btn {
+    background: #000000;
+}
+
+
+/* Sections */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 40px;
+}
+
+
+/* About */
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+
+/* Skills */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgb(118, 6, 82);
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 187, 238, 0.933);
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* Projects */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    background: rgb(25, 184, 196);
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(18, 14, 14, 0.08);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 12px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #050914;
+    font-weight: bold;
+}
+
+
+/* Services */
+
+.services-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background: rgb(137, 158, 19);
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+
+/* Resume */
+
+.resume-section {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: #d6d8dc;
+}
+
+.resume-section p {
+    margin: 20px 0;
+}
+
+
+/* Contact */
+
+.contact-intro {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contact-container a {
+    text-decoration: none;
+
+    background: #a10c54;
+
+    color: rgb(240, 235, 235);
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1074c1;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .skills-container,
+    .projects-container,
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
